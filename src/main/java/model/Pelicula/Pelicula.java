@@ -23,7 +23,7 @@ public class Pelicula {
     @Column(name = "titulo", length = 255, nullable = false)
     private String titulo;
 
-    @OneToMany(mappedBy = "pelicula", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "pelicula", cascade = CascadeType.ALL)
     private List<Opinion> opiniones = new ArrayList<>();
 
     @Override
